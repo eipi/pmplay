@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /                     controllers.Application.index()
+GET           /api/users            controllers.Ops.getUsers()
+GET           /api/users/:id        controllers.Ops.getUser(id : Long)
+POST          /api/users            controllers.Ops.createUser()
+PUT           /api/users            controllers.Ops.updateUser()
+DELETE        /api/users/:id        controllers.Ops.deleteUser(id : Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file         controllers.Assets.at(path="/public", file)
